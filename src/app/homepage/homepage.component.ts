@@ -3,6 +3,7 @@ import {MatTableModule,MatTableDataSource} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
+import { CrudComponent } from '../crud/crud.component';
 
 export interface PeriodicElement {
   name: string;
@@ -38,7 +39,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 @Component({
   selector: 'app-homepage',
   standalone: true,
-  imports: [MatTableModule,MatPaginator,MatPaginatorModule,MatInputModule,MatFormFieldModule],
+  imports: [MatTableModule, MatPaginator, MatPaginatorModule, MatInputModule, MatFormFieldModule, CrudComponent],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.css'
 })
