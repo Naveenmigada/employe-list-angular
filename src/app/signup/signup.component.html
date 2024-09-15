@@ -1,0 +1,38 @@
+<form action="" [formGroup]="loginForm">
+    
+<div class="form">
+    <div class="form__group field">
+        <input formControlName="firstname" type="text" id="firstname" class="form__field" placeholder="First Name" required>
+        <label for="firstname" class="form__label">First Name</label>
+    </div>
+    <div class="form__group field">
+        <input formControlName="lastname" type="text" id="lastname" class="form__field" placeholder="Last Name" required>
+        <label for="lastname" class="form__label">Last Name</label>
+    </div>
+    <div class="form__group field">
+        <input formControlName="username" type="text" id="username" class="form__field" placeholder="User Name" required>
+        <label for="username" class="form__label">User Name</label>
+    </div>
+    <div class="form__group field">
+        <select id="gender" formControlName="gender" class="form__field" required>
+            <option value="" disabled selected>Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <label for="gender" class="form__label">Gender</label>
+    </div>
+    <div class="form__group field">
+        <input formControlName="age" type="number" id="age" class="form__field" placeholder="Age" required>
+        <label for="age" class="form__label">Age</label>
+    </div>
+    <div class="form__group field">
+        <input formControlName="password" type="password" id="password" class="form__field" placeholder="Password" [(ngModel)]="password" (input)="validate()"  required>
+        <label for="password" class="form__label">Create a Password</label>
+    </div>
+    <div class="form__group field">
+        <input formControlName="password2" type="password" id="confirm-password" class="form__field" placeholder="Confirm Password" [(ngModel)]="password2" (input)="validate()" required>
+        <label for="confirm-password" class="form__label">Confirm Password</label>
+    </div>
+    <button class="button" type="submit" [routerLink]="'/login'" [disabled]="!formvalid" (click)="validate()">Submit</button>
+</div>
+</form>

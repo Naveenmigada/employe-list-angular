@@ -1,0 +1,31 @@
+<form  [formGroup]="Form"  class="form">
+
+<p>
+  <mat-form-field  appearance="fill">
+    <mat-label>user id</mat-label>
+    <input  matInput placeholder="enter user-id" formControlName="name" (input)="validateForm()">
+    <mat-icon matSuffix>person</mat-icon>
+  </mat-form-field>
+</p>
+<div class="example-container">
+  <mat-form-field>
+    <mat-label>Enter your password</mat-label>
+    <input  matInput [type]="hide ? 'password' : 'text'" formControlName="password" (input)="validateForm()">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" class="no-border" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+
+
+</div>
+<button class="button2"
+ mat-raised-button type="submit"
+        [disabled]="!formvalid"
+        [routerLink]="'/homepage'"
+        matTooltip="login to homepage"
+        aria-label="Button that displays a tooltip when focused or hovered over">
+ login
+</button>
+</form>
+
+

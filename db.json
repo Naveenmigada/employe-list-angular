@@ -1,0 +1,31 @@
+{
+  "employee": [
+    {
+      "id": "47",
+      "firstname": "keerthy",
+      "lastname": "sanan",
+      "email": "keerthy@gmail.com",
+      "gender": "female",
+      "dob": "2022-09-02T18:30:00.000Z",
+      "role": "developer"
+    },
+    {
+      "id": "12",
+      "firstname": "samara simha",
+      "lastname": "reddy",
+      "email": "samarasimha@gmail.com",
+      "gender": "male",
+      "dob": "1994-07-06T18:30:00.000Z",
+      "role": "hiring"
+    },
+    {
+      "id": "21",
+      "firstname": "Naveen",
+      "lastname": "Migada",
+      "email": "naveenmigada@gmail.com",
+      "gender": "male",
+      "dob": "2024-09-16T18:30:00.000Z",
+      "role": "developer"
+    }
+  ]
+}

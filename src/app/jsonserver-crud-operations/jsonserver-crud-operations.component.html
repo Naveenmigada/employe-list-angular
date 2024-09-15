@@ -1,0 +1,89 @@
+<div class="row">
+    <div class="col-8">
+        <div class="card">
+            <div class="card-header bg success">
+                <div class="row">
+                    <div class="col-6">
+                        animal list
+                    </div>
+                    <div class="col-6 text-end">
+                        <button class="btn btn-primary btn-sm">new animal</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Availability</th>
+                            <th>Price</th>
+                            <th>actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let animal of animallist; let i = index">
+                            <td>{{ i + 1 }}</td>
+                            <td>{{ animal?.name }}</td>
+                            <td>{{ animal?.num }}</td>
+                            <td>{{ animal?.price }}</td>
+                            <td><button class="btn btn-primary" (click)="onedit(animal)">edit</button></td>
+                            <td><button class="btn btn-primary btn-sm" (click)="ondelete(animal.id)">delete</button></td>
+                            
+                          </tr>
+                          
+                        
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card">
+            <div class="card-header bg success">
+                <div class="row">
+                    <div class="col-6">
+                        new animal 
+                    </div>
+                    <div class="col-6 text-end">
+                        <button class="btn btn-primary btn-sm">close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <form>
+                                    
+                                    <div class="mb-3">
+                                        <label for="animalName" class="form-label">Name</label>
+                                        <input type="text" name="" [(ngModel)]="userObj.name" class="form-control" id="animalName" placeholder="Enter animal name">
+                                    </div>
+
+
+                                    <div class="mb-3">
+                                        <label for="availability" class="form-label">Availability</label>
+                                       <input type="number" [(ngModel)]="userObj.num" class="form-control" id="animal count" placeholder="enter no of animals">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="price" class="form-label">price</label>
+                                       <input type="number" [(ngModel)]="userObj.price" class="form-control" id="animal price" placeholder="enter the price">
+                                    </div>
+
+                                   
+                                    <div class="mb-3 text-end">
+                                        <button type="button" (click)="onsaveanimal()" class="btn btn-success">Submit</button>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

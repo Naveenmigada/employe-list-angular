@@ -1,0 +1,49 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to left,rgb(137, 205, 248,0.8),rgb(145, 237, 145,0.8),rgb(255, 182, 193,0.8),rgb(211, 211, 211,0.8),rgb(246, 246, 211));
+    padding: 10px;
+    
+    border-bottom: 2px solid #ccc;
+  }
+
+  .button-one {
+    background-color: lightyellow;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 1300px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .button-two {
+    background-color: lightyellow;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+ 
+  
+
+  .nav-button a {
+    text-decoration: none;
+    color: black;
+  }
+  
+
+  .nav-button:hover {
+    background-color: #eadf83; 
+  }
+  
+  @media (max-width: 600px) {
+    .navbar {
+      flex-direction: column;
+    }
+    
+    .nav-button {
+      margin: 5px 0;
+    }
+  }

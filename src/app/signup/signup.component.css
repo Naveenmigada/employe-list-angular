@@ -1,0 +1,125 @@
+.form{
+    margin-left: 400px;
+    padding-left: 200px;
+    margin-top: 40px;
+    width: 500px;
+    background: linear-gradient(to bottom,rgb(137, 205, 248,0.8),rgb(145, 237, 145,0.8),rgb(255, 182, 193,0.8),rgb(211, 211, 211,0.8),rgb(248, 248, 138));
+    border: 0.5px solid lightskyblue;
+    
+}
+.form__group {
+    position: relative;
+    padding: 20px 0 0;
+    width: 100%;
+    max-width: 280px;
+    background: linear-gradient(rgb(134, 207, 253,0.1),rgb(245, 251, 164,0.3));
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 0.1px solid rgb(38, 188, 225);
+  }
+
+  
+  .form__field {
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #9b9b9b;
+    outline: 0;
+    font-size: 17px;
+    color: #0e0d0d;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+  
+  .form__field::placeholder {
+    color: transparent;
+  }
+  
+  .form__field:placeholder-shown ~ .form__label {
+    font-size: 17px;
+    cursor: text;
+    top: 20px;
+    margin-left: 20px;
+  }
+  
+  .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #3402fd;
+    pointer-events: none;
+  }
+  
+  .form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #116399, #38caef);
+    border-image-slice: 1;
+  }
+  
+  .form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #5001fc;
+    font-weight: 700;
+  }
+  
+  /* reset input */
+  .form__field:required, .form__field:invalid {
+    box-shadow: none;
+  }
+/* From Uiverse.io by gharsh11032000 */ 
+.button {
+    cursor: pointer;
+    margin-bottom: 10px;
+    position: relative;
+    padding: 10px 24px;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 70px;
+    color: rgb(117, 83, 9);
+    border: 2px solid rgb(193, 163, 98);
+    border-radius: 34px;
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+  }
+  
+  .button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: rgb(207, 157, 49);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .button:hover::before {
+    scale: 3;
+  }
+  
+  .button:hover {
+    color: #212121;
+    scale: 1.1;
+    box-shadow: 0 0px 20px rgba(193, 163, 98,0.4);
+  }
+  
+  .button:active {
+    scale: 1;
+  }
+  
+  
+  
